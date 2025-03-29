@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Financial Challenge Center | 401Kid Interactive</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f9ff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2b6ca3;
+        }
+        
+        .family-setup, .family-info, .challenges-section, .add-challenge-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .family-info {
+            display: none;
+        }
+        
+        .challenges-section {
+            display: none;
+        }
+        
+        .add-challenge-form {
+            display: none;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #2b6ca3;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        button:hover {
+            background-color: #1d5080;
+        }
+        
+        .filter-btn {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        
+        .filter-btn.active {
+            background-color: #2b6ca3;
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2b6ca3;
+        }
+        
+        .completion-container {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+        
+        .completion-bar {
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            width: 0%;
+        }
+        
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-display {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .filter-display span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .challenges-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .challenge-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 4px solid #2b6ca3;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .challenge-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .challenge-card.completed {
+            border-left-color: #4CAF50;
+            background-color: #f0f7e6;
+        }
+        
+        .challenge-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .challenge-header h3 {
+            margin: 0;
+            color: #2b6ca3;
+            flex: 1;
+        }
+        
+        .challenge-points {
+            background-color: #2b6ca3;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        
+        .challenge-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 15px 0;
+        }
+        
+        .meta-tag {
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background-color: #e0e0e0;
+        }
+        
+        .meta-tag.age {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+        }
+        
+        .meta-tag.category {
+            background-color: #e8f5e9;
+            color: #1b5e20;
+        }
+        
+        .meta-tag.difficulty {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+        
+        .challenge-actions {
+            margin-top: 15px;
+            text-align: right;
+        }
+        
+        .complete-btn {
+            background-color: #4CAF50;
+        }
+        
+        .incomplete-btn {
+            background-color: #ff9800;
+        }
+        
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Family Financial Challenge Center</h1>
+        <p>Complete fun financial challenges together and track your family's progress!</p>
+    </div>
+    
+    <div class="instructions">
+        <h2>How to Use This Challenge Center</h2>
+        <p>This interactive tool helps your family practice financial concepts from Walter Clarke's 401Kid book through fun challenges. Here's how it works:</p>
+        <ol>
+            <li>Enter your family name to get started</li>
+            <li>Browse challenges filtered by age group, category, or difficulty</li>
+            <li>Complete challenges together as a family</li>
+            <li>Mark challenges as complete to earn points</li>
+            <li>Track your progress and add your own custom challenges</li>
+        </ol>
+    </div>
+    
+    <div id="family-setup" class="family-setup">
+        <h2>Set Up Your Family Profile</h2>
+        <p>Enter your family name to begin tracking your financial challenges:</p>
+        
+        <div class="form-group">
+            <label for="family-name-input">Family Name:</label>
+            <input type="text" id="family-name-input" placeholder="e.g., The Smith Family">
+        </div>
+        
+        <button id="setup-family-btn">Start Family Challenges</button>
+    </div>
+    
+    <div id="family-info" class="family-info">
+        <h2>Welcome, <span id="family-name-display"></span>!</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div>Family Points</div>
+                <div class="stat-value" id="family-points-display">0</div>
+            </div>
+            
+            <div class="stat-box">
+                <div>Challenges Completed</div>
+                <div class="stat-value" id="completion-percentage">0%</div>
+                <div class="completion-container">
+                    <div class="completion-bar" id="completion-bar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="reset-progress-btn">Reset Progress</button>
+    </div>
+    
+    <div id="challenges-section" class="challenges-section">
+        <h2>Financial Challenges</h2>
+        
+        <div class="filter-controls">
+            <button id="filter-all" class="filter-btn active">All Challenges</button>
+            <button id="filter-age" class="filter-btn">Filter by Age</button>
+            <button id="filter-category" class="filter-btn">Filter by Category</button>
+            <button id="filter-difficulty" class="filter-btn">Filter by Difficulty</button>
+            
+            <div class="filter-display">
+                <span id="filter-type">All Challenges</span>
+                <select id="filter-value">
+                    <option value="all">All</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="add-challenge-btn">Add Custom Challenge</button>
+        
+        <div id="challenges-list" class="challenges-list">
+            <!-- Challenges will be added here by JavaScript -->
+        </div>
+    </div>
+    
+    <div id="add-challenge-form" class="add-challenge-form">
+        <h2>Create a Custom Challenge</h2>
+        
+        <div class="form-group">
+            <label for="challenge-title">Challenge Title:</label>
+            <input type="text" id="challenge-title" placeholder="Enter a title for your challenge">
+        </div>
+        
+        <div class="form-group">
+            <label for="challenge-description">Challenge Description:</label>
+            <textarea id="challenge-description" placeholder="Describe what your family needs to do to complete this challenge"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="challenge-category">Category:</label>
+            <select id="challenge-category">
+                <!-- Options will be added by JavaScript -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="challenge-age-group">Age Group:</label>
+            <select id="challenge-age-group">
+                <!-- Options will be added by JavaScript -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="challenge-difficulty">Difficulty:</label>
+            <select id="challenge-difficulty">
+                <!-- Options will be added by JavaScript -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="challenge-points">Points (10-100):</label>
+            <input type="number" id="challenge-points" min="10" max="100" placeholder="e.g., 30">
+        </div>
+        
+        <div class="button-group">
+            <button id="submit-challenge-btn">Add Challenge</button>
+            <button id="cancel-add-btn">Cancel</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Based on concepts from "401Kid" by Walter Clarke | Interactive tool created for financial literacy education</p>
+    </div>
+    
+    <script src="financial_challenge.js"></script>
+</body>
+</html>

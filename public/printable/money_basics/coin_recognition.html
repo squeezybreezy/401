@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Recognition Activity | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .coin-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .coin {
+            text-align: center;
+            margin: 10px;
+        }
+        .coin-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .penny { background-color: #b87333; color: white; }
+        .nickel { background-color: #a8a9ad; color: black; }
+        .dime { background-color: #c0c0c0; color: black; }
+        .quarter { background-color: #c0c0c0; color: black; }
+        .half-dollar { background-color: #c0c0c0; color: black; }
+        .dollar-coin { background-color: #daa520; color: black; }
+        
+        .matching-activity {
+            margin-top: 40px;
+        }
+        .matching-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .matching-item {
+            flex: 1;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            margin: 0 10px;
+            text-align: center;
+            min-height: 50px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Let's Learn About Coins!</h1>
+        <p>Ages 5-7</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Money Explorer!</h2>
+            <p>Money is like a special tool that helps us get things we need and want. Before we can use money, we need to know what different coins look like and how much they're worth. Let's learn about coins together!</p>
+        </div>
+        
+        <h3>Meet the Coins</h3>
+        
+        <div class="coin-row">
+            <div class="coin">
+                <div class="coin-image penny">1¢</div>
+                <p><strong>Penny</strong></p>
+                <p>Worth: 1 cent</p>
+            </div>
+            
+            <div class="coin">
+                <div class="coin-image nickel">5¢</div>
+                <p><strong>Nickel</strong></p>
+                <p>Worth: 5 cents</p>
+            </div>
+            
+            <div class="coin">
+                <div class="coin-image dime">10¢</div>
+                <p><strong>Dime</strong></p>
+                <p>Worth: 10 cents</p>
+            </div>
+        </div>
+        
+        <div class="coin-row">
+            <div class="coin">
+                <div class="coin-image quarter">25¢</div>
+                <p><strong>Quarter</strong></p>
+                <p>Worth: 25 cents</p>
+            </div>
+            
+            <div class="coin">
+                <div class="coin-image half-dollar">50¢</div>
+                <p><strong>Half Dollar</strong></p>
+                <p>Worth: 50 cents</p>
+            </div>
+            
+            <div class="coin">
+                <div class="coin-image dollar-coin">$1</div>
+                <p><strong>Dollar Coin</strong></p>
+                <p>Worth: 100 cents</p>
+            </div>
+        </div>
+        
+        <div class="matching-activity">
+            <h3>Match the Coins!</h3>
+            <p>Draw a line connecting each coin to its correct value:</p>
+            
+            <div class="matching-row">
+                <div class="matching-item">Quarter</div>
+                <div class="matching-item">1 cent</div>
+            </div>
+            
+            <div class="matching-row">
+                <div class="matching-item">Penny</div>
+                <div class="matching-item">10 cents</div>
+            </div>
+            
+            <div class="matching-row">
+                <div class="matching-item">Nickel</div>
+                <div class="matching-item">25 cents</div>
+            </div>
+            
+            <div class="matching-row">
+                <div class="matching-item">Dime</div>
+                <div class="matching-item">5 cents</div>
+            </div>
+            
+            <div class="matching-row">
+                <div class="matching-item">Half Dollar</div>
+                <div class="matching-item">100 cents</div>
+            </div>
+            
+            <div class="matching-row">
+                <div class="matching-item">Dollar Coin</div>
+                <div class="matching-item">50 cents</div>
+            </div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This activity helps children recognize different coins and understand their values. After completing this worksheet, try these follow-up activities:</p>
+            <ul>
+                <li>Have your child sort real coins by type</li>
+                <li>Practice counting small amounts with actual coins</li>
+                <li>Discuss what each coin can buy in today's world</li>
+                <li>Talk about how saving even small coins can add up over time</li>
+            </ul>
+            <p>Remember, as Walter Clarke emphasizes in 401Kid, early money conversations create a foundation for lifelong financial literacy. Make these activities fun and engaging to foster a positive relationship with money concepts.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

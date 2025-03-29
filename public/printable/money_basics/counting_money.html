@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Counting Game | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .counting-exercise {
+            margin: 30px 0;
+        }
+        .coin-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .coins {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 20px;
+        }
+        .coin {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        .penny { background-color: #b87333; }
+        .nickel { background-color: #a8a9ad; color: black; }
+        .dime { background-color: #c0c0c0; color: black; }
+        .quarter { background-color: #c0c0c0; color: black; }
+        
+        .answer-box {
+            border: 2px dashed #2b6ca3;
+            width: 100px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .making-change {
+            margin-top: 40px;
+        }
+        .scenario {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Count Your Coins!</h1>
+        <p>Ages 5-7</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Money Explorer!</h2>
+            <p>Now that you know what different coins look like, let's practice counting them! Counting money is an important skill that helps you know how much you have and what you can buy with it.</p>
+        </div>
+        
+        <div class="counting-exercise">
+            <h3>How Much Money?</h3>
+            <p>Count the coins in each group and write the total amount in the box.</p>
+            
+            <div class="coin-group">
+                <div class="coins">
+                    <div class="coin penny">1¢</div>
+                    <div class="coin penny">1¢</div>
+                    <div class="coin penny">1¢</div>
+                    <div class="coin nickel">5¢</div>
+                </div>
+                <p>Total: </p>
+                <div class="answer-box">¢</div>
+            </div>
+            
+            <div class="coin-group">
+                <div class="coins">
+                    <div class="coin nickel">5¢</div>
+                    <div class="coin nickel">5¢</div>
+                    <div class="coin dime">10¢</div>
+                </div>
+                <p>Total: </p>
+                <div class="answer-box">¢</div>
+            </div>
+            
+            <div class="coin-group">
+                <div class="coins">
+                    <div class="coin penny">1¢</div>
+                    <div class="coin nickel">5¢</div>
+                    <div class="coin dime">10¢</div>
+                    <div class="coin quarter">25¢</div>
+                </div>
+                <p>Total: </p>
+                <div class="answer-box">¢</div>
+            </div>
+            
+            <div class="coin-group">
+                <div class="coins">
+                    <div class="coin quarter">25¢</div>
+                    <div class="coin quarter">25¢</div>
+                    <div class="coin dime">10¢</div>
+                    <div class="coin nickel">5¢</div>
+                </div>
+                <p>Total: </p>
+                <div class="answer-box">¢</div>
+            </div>
+        </div>
+        
+        <div class="making-change">
+            <h3>Making Change</h3>
+            <p>Sometimes when we buy things, we need to figure out how much change we should get back. Let's practice!</p>
+            
+            <div class="scenario">
+                <p><strong>Scenario 1:</strong> You want to buy a sticker that costs 25¢. You give the cashier 50¢. How much change should you get back?</p>
+                <div class="answer-box">¢</div>
+            </div>
+            
+            <div class="scenario">
+                <p><strong>Scenario 2:</strong> You want to buy a small toy that costs 75¢. You give the cashier $1.00 (100¢). How much change should you get back?</p>
+                <div class="answer-box">¢</div>
+            </div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This activity helps children practice counting money and making change - essential skills for financial literacy. As Walter Clarke emphasizes in 401Kid, understanding the basic mechanics of money is the foundation for more complex financial concepts later.</p>
+            <p>Extend this activity by:</p>
+            <ul>
+                <li>Using real coins to practice counting</li>
+                <li>Setting up a pretend store at home where your child can practice making purchases and calculating change</li>
+                <li>Discussing how saving even small amounts of change can add up over time</li>
+                <li>Introducing the concept of a piggy bank or savings jar for collecting coins</li>
+            </ul>
+            <p>These hands-on activities reinforce the concept that money is a tool we can learn to use wisely, which aligns with the core message of financial discipline in the book.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

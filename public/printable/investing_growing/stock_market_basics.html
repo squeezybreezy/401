@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Basics | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .stock-section {
+            margin: 30px 0;
+        }
+        .stock-definition {
+            background-color: #f0f7ff;
+            border: 2px solid #2b6ca3;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .company-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .company-card {
+            width: 180px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .company-logo {
+            height: 60px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .stock-table th, .stock-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .stock-table th {
+            background-color: #2b6ca3;
+            color: white;
+        }
+        .stock-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .stock-game {
+            margin: 30px 0;
+            border: 2px solid #2b6ca3;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .stock-chart {
+            height: 200px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .chart-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2b6ca3;
+        }
+        .chart-point {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #2b6ca3;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .reflection-section {
+            margin: 30px 0;
+        }
+        .reflection-question {
+            margin: 15px 0;
+        }
+        .reflection-answer {
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+            min-height: 40px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Stock Market Basics: Owning Pieces of Companies</h1>
+        <p>Ages 10-13</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Future Investor!</h2>
+            <p>In "401Kid," Walter Clarke talks about how owning stocks is one way to build wealth over time. But what exactly are stocks? And how does the stock market work? Let's explore the exciting world of investing in companies!</p>
+        </div>
+        
+        <div class="stock-section">
+            <h3>What is a Stock?</h3>
+            
+            <div class="stock-definition">
+                <p>A <strong>stock</strong> is a small piece of ownership in a company. When you buy a stock, you become a part-owner (or shareholder) of that company!</p>
+                <p>Companies sell stocks to raise money to grow their business. In return, as an owner, you might:</p>
+                <ul>
+                    <li>Make money if the company's value grows (the stock price goes up)</li>
+                    <li>Receive dividends (a share of the company's profits)</li>
+                    <li>Get to vote on important company decisions</li>
+                </ul>
+                <p>The <strong>stock market</strong> is where people buy and sell stocks. It's like a marketplace for company ownership!</p>
+            </div>
+        </div>
+        
+        <div class="stock-section">
+            <h3>Companies You Might Know</h3>
+            <p>Many companies you're familiar with sell stocks that anyone can buy:</p>
+            
+            <div class="company-section">
+                <div class="company-card">
+                    <div class="company-logo">APPLE</div>
+                    <p>Makes iPhones, iPads, and Mac computers</p>
+                    <p>Stock Symbol: AAPL</p>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-logo">DISNEY</div>
+                    <p>Makes movies, owns theme parks</p>
+                    <p>Stock Symbol: DIS</p>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-logo">NIKE</div>
+                    <p>Makes shoes, clothing, and sports equipment</p>
+                    <p>Stock Symbol: NKE</p>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-logo">TESLA</div>
+                    <p>Makes electric cars and solar energy products</p>
+                    <p>Stock Symbol: TSLA</p>
+                </div>
+            </div>
+            
+            <p>Each company has a <strong>stock symbol</strong> (also called a ticker) - a short code that represents the company on the stock market.</p>
+        </div>
+        
+        <div class="stock-section">
+            <h3>How Stocks Work</h3>
+            
+            <p>Let's say a company called "Super Lemonade" wants to expand and build more lemonade stands. They need $1,000 to do this.</p>
+            
+            <ol>
+                <li>They decide to sell 100 shares of stock at $10 each</li>
+                <li>You buy 1 share for $10, so you own 1% of the company</li>
+                <li>The company uses your money (and money from other investors) to build more lemonade stands</li>
+                <li>If the company does well and makes more profit, your stock might increase in value to $15</li>
+                <li>You could sell your stock and make $5 profit, or keep it and hope it grows even more!</li>
+            </ol>
+            
+            <p>The price of a stock changes based on how well people think the company is doing and how many people want to buy or sell the stock.</p>
+        </div>
+        
+        <div class="stock-game">
+            <h3>Stock Market Simulation Game</h3>
+            <p>Let's practice investing with a simple stock market game!</p>
+            
+            <p>Imagine you have $1,000 to invest in these companies. Fill in the table to show how you would invest:</p>
+            
+            <table class="stock-table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Stock Price</th>
+                        <th>Number of Shares to Buy</th>
+                        <th>Total Investment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TechGadget Inc.</td>
+                        <td>$50 per share</td>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Healthy Foods Co.</td>
+                        <td>$25 per share</td>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Fun Games Ltd.</td>
+                        <td>$10 per share</td>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Clean Energy Corp.</td>
+                        <td>$100 per share</td>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: right;"><strong>Total Investment:</strong></td>
+                        <td>$</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>Now imagine what happens to your investments after one year:</p>
+            
+            <table class="stock-table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>New Stock Price</th>
+                        <th>Your Shares</th>
+                        <th>New Value</th>
+                        <th>Profit/Loss</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TechGadget Inc.</td>
+                        <td>$60 per share</td>
+                        <td></td>
+                        <td>$</td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Healthy Foods Co.</td>
+                        <td>$20 per share</td>
+                        <td></td>
+                        <td>$</td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Fun Games Ltd.</td>
+                        <td>$15 per share</td>
+                        <td></td>
+                        <td>$</td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Clean Energy Corp.</td>
+                        <td>$120 per share</td>
+                        <td></td>
+                        <td>$</td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: right;"><strong>Total Profit/Loss:</strong></td>
+                        <td>$</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="reflection-section">
+            <h3>Think About It</h3>
+            
+            <div class="reflection-question">
+                <p>1. Why might someone want to own stocks instead of just keeping their money in a savings account?</p>
+                <div class="reflection-answer"></div>
+            </div>
+            
+            <div class="reflection-question">
+                <p>2. What kinds of companies would you be interested in owning stock in? Why?</p>
+                <div class="reflection-answer"></div>
+            </div>
+            
+            <div class="reflection-question">
+                <p>3. Stocks can go up and down in value. How would you feel if a stock you owned went down in value? What would you do?</p>
+                <div class="reflection-answer"></div>
+            </div>
+            
+            <div class="reflection-question">
+                <p>4. Why is it important to invest in different companies rather than putting all your money in one company?</p>
+                <div class="reflection-answer"></div>
+            </div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This activity introduces the basic concepts of stock market investing, which Walter Clarke discusses in 401Kid as an important way to build wealth over time. Understanding how company ownership works helps children develop a more sophisticated view of money and investing.</p>
+            <p>To enhance this activity:</p>
+            <ul>
+                <li>Discuss companies your family uses or knows about that are publicly traded</li>
+                <li>Consider setting up a small investment account for your child with fractional shares</li>
+                <li>Use free stock market simulators online to practice investing without real money</li>
+                <li>Talk about the importance of long-term investing and not panicking when markets go down</li>
+                <li>Discuss how index funds can be a simpler way to own many companies at once</li>
+            </ul>
+            <p>As Clarke emphasizes in the book, teaching children about investing in assets like stocks helps them understand how to make their money work for them, rather than just working for money. This mindset shift is crucial for building long-term wealth.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

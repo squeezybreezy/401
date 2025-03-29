@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Business Plan | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .business-section {
+            margin: 30px 0;
+            border: 2px solid #2b6ca3;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .input-field {
+            border-bottom: 1px dashed #ccc;
+            padding: 5px 0;
+            margin: 10px 0;
+            min-height: 25px;
+        }
+        .business-canvas {
+            margin: 30px 0;
+        }
+        .canvas-section {
+            margin: 20px 0;
+            border: 1px solid #2b6ca3;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .canvas-title {
+            background-color: #2b6ca3;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .canvas-content {
+            min-height: 80px;
+        }
+        .financial-plan {
+            margin: 30px 0;
+        }
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .financial-table th, .financial-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .financial-table th {
+            background-color: #2b6ca3;
+            color: white;
+        }
+        .timeline {
+            display: flex;
+            margin: 30px 0;
+            position: relative;
+        }
+        .timeline:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2b6ca3;
+            z-index: 1;
+        }
+        .timeline-point {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 2px solid #2b6ca3;
+            border-radius: 50%;
+            z-index: 2;
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .timeline-label {
+            position: absolute;
+            top: 25px;
+            text-align: center;
+            font-size: 12px;
+            width: 100px;
+            margin-left: -40px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My First Business Plan</h1>
+        <p>Ages 8-10</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Business Owner!</h2>
+            <p>Every successful business starts with a plan. A business plan helps you think through all the important parts of your business idea before you start. This simple business plan will help you organize your thoughts and create a roadmap for your business success!</p>
+        </div>
+        
+        <div class="business-section">
+            <h3>Business Basics</h3>
+            
+            <p><strong>My Business Name:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>My Business Slogan or Tagline:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>What my business does (in one sentence):</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>The problem my business solves:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>My business is for these customers:</strong></p>
+            <div class="input-field"></div>
+        </div>
+        
+        <div class="business-canvas">
+            <h3>My Business Model Canvas</h3>
+            
+            <div class="canvas-section">
+                <div class="canvas-title">Products & Services</div>
+                <p>What will I sell or provide to customers?</p>
+                <div class="canvas-content"></div>
+            </div>
+            
+            <div class="canvas-section">
+                <div class="canvas-title">Customer Value</div>
+                <p>How does my business help customers? Why will they choose my business?</p>
+                <div class="canvas-content"></div>
+            </div>
+            
+            <div class="canvas-section">
+                <div class="canvas-title">Resources Needed</div>
+                <p>What supplies, tools, or help will I need to start my business?</p>
+                <div class="canvas-content"></div>
+            </div>
+            
+            <div class="canvas-section">
+                <div class="canvas-title">Marketing Plan</div>
+                <p>How will customers find out about my business?</p>
+                <div class="canvas-content"></div>
+            </div>
+        </div>
+        
+        <div class="financial-plan">
+            <h3>My Financial Plan</h3>
+            
+            <p><strong>Startup Costs:</strong> What will it cost to start my business?</p>
+            <table class="financial-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Startup Costs:</strong></td>
+                        <td>$</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Pricing:</strong> How much will I charge for my product or service?</p>
+            <div class="input-field">$</div>
+            
+            <p><strong>Sales Goal:</strong> How many products or services do I hope to sell each week?</p>
+            <div class="input-field"></div>
+            
+            <p><strong>Weekly Income:</strong> Price × Number of Sales = $</p>
+            <div class="input-field"></div>
+            
+            <p><strong>Weekly Expenses:</strong> Ongoing costs to run my business</p>
+            <div class="input-field">$</div>
+            
+            <p><strong>Weekly Profit:</strong> Income - Expenses = $</p>
+            <div class="input-field"></div>
+        </div>
+        
+        <div class="business-section">
+            <h3>My Business Timeline</h3>
+            <p>What steps will you take to start and grow your business?</p>
+            
+            <div class="timeline">
+                <div class="timeline-point">
+                    <div class="timeline-label">Step 1: Planning</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">Step 2: Gathering Resources</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">Step 3: First Sales</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">Step 4: Growing Business</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">Step 5: Future Goals</div>
+                </div>
+            </div>
+            
+            <p><strong>Step 1 Details:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>Step 2 Details:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>Step 3 Details:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>Step 4 Details:</strong></p>
+            <div class="input-field"></div>
+            
+            <p><strong>Step 5 Details:</strong></p>
+            <div class="input-field"></div>
+        </div>
+        
+        <div class="business-section">
+            <h3>The Five Faces of My Business Dollar</h3>
+            <p>How will I use the money my business earns? (Fill in percentages)</p>
+            
+            <p><strong>Save:</strong> <span class="input-field" style="width: 50px; display: inline-block;">%</span> What will I save for?</p>
+            <div class="input-field"></div>
+            
+            <p><strong>Spend:</strong> <span class="input-field" style="width: 50px; display: inline-block;">%</span> What business expenses will I have?</p>
+            <div class="input-field"></div>
+            
+            <p><strong>Invest:</strong> <span class="input-field" style="width: 50px; display: inline-block;">%</span> How will I grow my business?</p>
+            <div class="input-field"></div>
+            
+            <p><strong>Give:</strong> <span class="input-field" style="width: 50px; display: inline-block;">%</span> How will I help others with my business?</p>
+            <div class="input-field"></div>
+            
+            <p><strong>Earn:</strong> <span class="input-field" style="width: 50px; display: inline-block;">%</span> How will I pay myself?</p>
+            <div class="input-field"></div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This simple business plan activity helps children apply entrepreneurial concepts from Walter Clarke's 401Kid in a practical way. By working through this plan, children learn to think systematically about creating value and earning income.</p>
+            <p>To enhance this activity:</p>
+            <ul>
+                <li>Help your child identify a business idea that matches their interests and abilities</li>
+                <li>Discuss real-world examples of small businesses and how they operate</li>
+                <li>Consider providing a small "startup loan" that your child must repay from business earnings</li>
+                <li>Use this as an opportunity to discuss profit, loss, and the value of reinvestment</li>
+                <li>Connect the business planning process to the "think like an owner" concept from the book</li>
+            </ul>
+            <p>As Clarke emphasizes, entrepreneurship teaches children valuable life skills beyond just making money—it develops creativity, problem-solving, resilience, and financial literacy in a hands-on way that children find engaging and meaningful.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

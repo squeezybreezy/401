@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Budget Activity | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .budget-section {
+            margin: 30px 0;
+        }
+        .budget-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .budget-row {
+            display: flex;
+            align-items: center;
+        }
+        .budget-label {
+            width: 150px;
+            font-weight: bold;
+        }
+        .budget-amount {
+            width: 100px;
+            height: 30px;
+            border: 2px solid #2b6ca3;
+            border-radius: 5px;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .budget-jar {
+            width: 80px;
+            height: 100px;
+            background-color: transparent;
+            border: 2px solid #333;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            margin: 0 10px;
+        }
+        .budget-jar-label {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 12px;
+        }
+        .five-jars {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0 30px;
+        }
+        .decision-section {
+            margin: 40px 0;
+        }
+        .scenario {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .scenario-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .scenario-option {
+            width: 45%;
+            border: 1px dashed #2b6ca3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My First Budget Plan</h1>
+        <p>Ages 7-9</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Money Manager!</h2>
+            <p>A budget is a plan for your money. It helps you decide how to use your money wisely so you can save for things you want, help others, and still have fun! Let's create your very own budget plan.</p>
+        </div>
+        
+        <div class="budget-section">
+            <h3>The Five Faces of a Dollar</h3>
+            <p>In the book "401Kid," Walter Clarke talks about the five different ways we can use our money:</p>
+            
+            <ol>
+                <li><strong>Save:</strong> Keep money for future needs and wants</li>
+                <li><strong>Spend:</strong> Use money for things we need and want now</li>
+                <li><strong>Invest:</strong> Use money to make more money grow over time</li>
+                <li><strong>Give:</strong> Share money with others who need help</li>
+                <li><strong>Earn:</strong> Get more money by working or creating value</li>
+            </ol>
+            
+            <div class="five-jars">
+                <div class="budget-jar">
+                    <div class="budget-jar-label">SAVE</div>
+                </div>
+                <div class="budget-jar">
+                    <div class="budget-jar-label">SPEND</div>
+                </div>
+                <div class="budget-jar">
+                    <div class="budget-jar-label">INVEST</div>
+                </div>
+                <div class="budget-jar">
+                    <div class="budget-jar-label">GIVE</div>
+                </div>
+                <div class="budget-jar">
+                    <div class="budget-jar-label">EARN</div>
+                </div>
+            </div>
+            
+            <p>Color in each jar to show how much of your money you want to put in each one!</p>
+        </div>
+        
+        <div class="budget-section">
+            <h3>My Money Plan</h3>
+            <p>Imagine you receive $10. How would you divide it among these categories?</p>
+            
+            <div class="budget-container">
+                <div class="budget-row">
+                    <div class="budget-label">Save:</div>
+                    <div class="budget-amount">$</div>
+                    <p>What are you saving for?</p>
+                </div>
+                
+                <div class="budget-row">
+                    <div class="budget-label">Spend:</div>
+                    <div class="budget-amount">$</div>
+                    <p>What will you spend on?</p>
+                </div>
+                
+                <div class="budget-row">
+                    <div class="budget-label">Invest:</div>
+                    <div class="budget-amount">$</div>
+                    <p>How will this money grow?</p>
+                </div>
+                
+                <div class="budget-row">
+                    <div class="budget-label">Give:</div>
+                    <div class="budget-amount">$</div>
+                    <p>Who will you help?</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px;">Total: $10</p>
+        </div>
+        
+        <div class="decision-section">
+            <h3>Budget Decision Time!</h3>
+            <p>Let's practice making budget decisions:</p>
+            
+            <div class="scenario">
+                <p><strong>Scenario 1:</strong> Your grandma gives you $5 for your birthday. Your friend invites you to get ice cream that costs $5, but you've been saving for a $20 toy.</p>
+                <div class="scenario-options">
+                    <div class="scenario-option">
+                        <p>Option A: Spend all $5 on ice cream with your friend</p>
+                    </div>
+                    <div class="scenario-option">
+                        <p>Option B: Save the $5 toward your toy and suggest a free activity with your friend</p>
+                    </div>
+                </div>
+                <p>Circle your choice. Why did you choose this option?</p>
+                <div style="border-bottom: 1px dashed #ccc; padding: 15px;"></div>
+            </div>
+            
+            <div class="scenario">
+                <p><strong>Scenario 2:</strong> You earned $10 doing chores. You want to buy a $7 book, but you also promised to donate $2 to help animals at the shelter.</p>
+                <div class="scenario-options">
+                    <div class="scenario-option">
+                        <p>Option A: Buy the book now and skip the donation</p>
+                    </div>
+                    <div class="scenario-option">
+                        <p>Option B: Donate $2 as promised and save $8 to buy the book later</p>
+                    </div>
+                </div>
+                <p>Circle your choice. Why did you choose this option?</p>
+                <div style="border-bottom: 1px dashed #ccc; padding: 15px;"></div>
+            </div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This budgeting activity introduces children to Walter Clarke's "Five Faces of a Dollar" concept from 401Kid. By creating a simple budget, children begin to understand that money has different purposes and that planning helps them achieve their financial goals.</p>
+            <p>To enhance this activity:</p>
+            <ul>
+                <li>Use real money to physically divide into different jars or envelopes</li>
+                <li>Discuss your family's approach to budgeting in age-appropriate terms</li>
+                <li>Help your child understand that budgeting isn't about restriction but about making intentional choices</li>
+                <li>Point out that the "earn" category is about planning ways to increase income</li>
+                <li>Revisit the budget regularly to reinforce the habit of financial planning</li>
+            </ul>
+            <p>As Clarke emphasizes in the book, financial discipline starts with understanding that every dollar has a purpose. This activity helps children develop that mindset from an early age.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

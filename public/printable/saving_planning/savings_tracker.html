@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Tracker | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .tracker-section {
+            margin: 30px 0;
+        }
+        .thermometer-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .thermometer {
+            width: 80px;
+            height: 400px;
+            background-color: white;
+            border: 3px solid #333;
+            border-radius: 40px 40px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .thermometer-bulb {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 3px solid #333;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .thermometer-scale {
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 50%;
+            width: 2px;
+            background-color: #333;
+            transform: translateX(-50%);
+        }
+        .thermometer-marker {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #333;
+        }
+        .thermometer-label {
+            position: absolute;
+            right: -70px;
+            transform: translateY(-50%);
+            font-size: 14px;
+        }
+        .savings-log {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        .savings-log th, .savings-log td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .savings-log th {
+            background-color: #2b6ca3;
+            color: white;
+        }
+        .savings-log tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .milestone-section {
+            margin: 30px 0;
+        }
+        .milestone {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .milestone-checkbox {
+            width: 25px;
+            height: 25px;
+            border: 2px solid #2b6ca3;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .milestone-text {
+            flex-grow: 1;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Savings Tracker</h1>
+        <p>Ages 7-9</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Money Saver!</h2>
+            <p>Tracking your savings helps you see your progress and stay motivated. Use this tracker to watch your money grow as you save for your goal!</p>
+        </div>
+        
+        <div class="tracker-section">
+            <h3>My Savings Goal</h3>
+            <p>I am saving for: <span style="text-decoration: underline; padding: 0 100px;"></span></p>
+            <p>Total amount needed: $ <span style="text-decoration: underline; padding: 0 50px;"></span></p>
+            
+            <div class="thermometer-container">
+                <div class="thermometer">
+                    <div class="thermometer-bulb"></div>
+                    <div class="thermometer-scale"></div>
+                    
+                    <!-- Markers on the thermometer -->
+                    <div class="thermometer-marker" style="bottom: 20%;">
+                        <div class="thermometer-label">20%</div>
+                    </div>
+                    <div class="thermometer-marker" style="bottom: 40%;">
+                        <div class="thermometer-label">40%</div>
+                    </div>
+                    <div class="thermometer-marker" style="bottom: 60%;">
+                        <div class="thermometer-label">60%</div>
+                    </div>
+                    <div class="thermometer-marker" style="bottom: 80%;">
+                        <div class="thermometer-label">80%</div>
+                    </div>
+                    <div class="thermometer-marker" style="bottom: 100%;">
+                        <div class="thermometer-label">100%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Color in the thermometer to show how much you've saved so far!</p>
+        </div>
+        
+        <div class="savings-log-section">
+            <h3>My Savings Log</h3>
+            <p>Keep track of the money you save:</p>
+            
+            <table class="savings-log">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount Saved</th>
+                        <th>How I Earned It</th>
+                        <th>Total Saved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="milestone-section">
+            <h3>My Savings Milestones</h3>
+            <p>Check off these milestones as you reach them:</p>
+            
+            <div class="milestone">
+                <div class="milestone-checkbox"></div>
+                <div class="milestone-text">I've saved 25% of my goal (¼ of the way there!)</div>
+            </div>
+            <div class="milestone">
+                <div class="milestone-checkbox"></div>
+                <div class="milestone-text">I've saved 50% of my goal (Halfway there!)</div>
+            </div>
+            <div class="milestone">
+                <div class="milestone-checkbox"></div>
+                <div class="milestone-text">I've saved 75% of my goal (¾ of the way there!)</div>
+            </div>
+            <div class="milestone">
+                <div class="milestone-checkbox"></div>
+                <div class="milestone-text">I've reached my goal! (100%)</div>
+            </div>
+            
+            <h3>How I'll celebrate reaching my goal:</h3>
+            <div style="border: 2px dashed #ccc; padding: 15px; min-height: 50px;"></div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This savings tracker helps children visualize their progress toward a financial goal - a powerful motivator for developing the habit of saving. As Walter Clarke emphasizes in 401Kid, tracking progress is essential for building financial discipline.</p>
+            <p>To enhance this activity:</p>
+            <ul>
+                <li>Help your child set up a dedicated savings container (jar, piggy bank, etc.) for this specific goal</li>
+                <li>Establish a regular "money check-in" time to update the tracker together</li>
+                <li>Celebrate milestone achievements with small rewards or recognition</li>
+                <li>Discuss how it feels to watch savings grow over time</li>
+                <li>Point out the connection between patience (delayed gratification) and reaching financial goals</li>
+            </ul>
+            <p>This activity reinforces the book's emphasis on consistency and discipline as foundational traits for financial success. By tracking their savings, children experience firsthand how small, consistent actions lead to significant results over time.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

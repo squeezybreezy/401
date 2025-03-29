@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting Worksheet | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .goal-section {
+            margin: 30px 0;
+            border: 2px solid #2b6ca3;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .goal-input {
+            border: 2px dashed #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            min-height: 50px;
+        }
+        .steps-section {
+            margin: 15px 0;
+        }
+        .step-box {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background-color: #2b6ca3;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .step-input {
+            flex-grow: 1;
+            border: 1px dashed #ccc;
+            padding: 10px;
+            min-height: 30px;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            position: relative;
+        }
+        .timeline:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2b6ca3;
+            z-index: 1;
+        }
+        .timeline-point {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 2px solid #2b6ca3;
+            border-radius: 50%;
+            z-index: 2;
+            position: relative;
+        }
+        .timeline-label {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .celebration-box {
+            border: 2px dashed #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #fff4e6;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Money Goal Planner</h1>
+        <p>Ages 7-9</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Money Planner!</h2>
+            <p>Setting goals helps us save money for things we really want. When we have a clear goal and a plan, it's easier to be patient and save instead of spending right away. Let's set a money goal and make a plan to reach it!</p>
+        </div>
+        
+        <div class="goal-section">
+            <h3>My Money Goal</h3>
+            <p>What would you like to save money for? Draw a picture or write about it:</p>
+            <div class="goal-input"></div>
+            
+            <h3>How much will it cost?</h3>
+            <div class="goal-input">$</div>
+            
+            <h3>How will I earn or get money for this goal?</h3>
+            <div class="goal-input"></div>
+            
+            <h3>Steps to Reach My Goal</h3>
+            <div class="steps-section">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <div class="step-input"></div>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <div class="step-input"></div>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <div class="step-input"></div>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">4</div>
+                    <div class="step-input"></div>
+                </div>
+            </div>
+            
+            <h3>When do I want to reach my goal?</h3>
+            <div class="timeline">
+                <div class="timeline-point">
+                    <div class="timeline-label">Today</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">25%</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">50%</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">75%</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="timeline-label">Goal!</div>
+                </div>
+            </div>
+            <p>I want to reach my goal by: <span style="text-decoration: underline; padding: 0 100px;"></span></p>
+            
+            <h3>How will I celebrate when I reach my goal?</h3>
+            <div class="celebration-box"></div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This goal-setting activity helps children develop financial discipline and delayed gratification - key concepts in Walter Clarke's 401Kid. By setting specific goals and creating a plan to achieve them, children learn that patience and persistence lead to rewards.</p>
+            <p>To enhance this activity:</p>
+            <ul>
+                <li>Help your child set a realistic goal that's achievable within a reasonable timeframe</li>
+                <li>Create a visual savings tracker to accompany this worksheet (like a thermometer chart)</li>
+                <li>Discuss the difference between short-term and long-term goals</li>
+                <li>Consider matching a portion of their savings to encourage the habit</li>
+                <li>Celebrate milestones along the way to maintain motivation</li>
+            </ul>
+            <p>As Clarke emphasizes in the book, teaching children to delay gratification builds the foundation for financial success. This worksheet helps children experience the satisfaction of working toward something meaningful rather than spending impulsively.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>

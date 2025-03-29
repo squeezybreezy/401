@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philanthropy Planning | 401Kid</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2b6ca3;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+        .activity-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .giving-section {
+            margin: 30px 0;
+        }
+        .giving-quote {
+            font-style: italic;
+            text-align: center;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-left: 4px solid #2b6ca3;
+            margin: 20px 0;
+        }
+        .causes-section {
+            margin: 30px 0;
+        }
+        .causes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .cause-card {
+            width: 180px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .cause-title {
+            font-weight: bold;
+            color: #2b6ca3;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .planning-section {
+            margin: 30px 0;
+            border: 2px solid #2b6ca3;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .planning-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .planning-table th, .planning-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .planning-table th {
+            background-color: #2b6ca3;
+            color: white;
+        }
+        .planning-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .impact-section {
+            margin: 30px 0;
+        }
+        .impact-examples {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .impact-example {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .reflection-section {
+            margin: 30px 0;
+        }
+        .reflection-question {
+            margin: 15px 0;
+        }
+        .reflection-answer {
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+            min-height: 40px;
+        }
+        .parent-note {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Philanthropy Planning: The Joy of Giving</h1>
+        <p>All Ages</p>
+    </div>
+    
+    <div class="activity-container">
+        <div class="instructions">
+            <h2>Hello, Generous Heart!</h2>
+            <p>In "401Kid," Walter Clarke teaches that giving is one of the Five Faces of a Dollar. When we share our money, time, and talents with others, we not only help them but also enrich our own lives. This activity will help you create your own philanthropy plan—a strategy for how you want to make a positive difference in the world!</p>
+        </div>
+        
+        <div class="giving-section">
+            <h3>Why Giving Matters</h3>
+            <p>Giving to others is important because:</p>
+            <ul>
+                <li>It helps people, animals, or causes that need support</li>
+                <li>It connects us to our community and the wider world</li>
+                <li>It teaches us gratitude for what we have</li>
+                <li>It brings joy and purpose to our lives</li>
+                <li>It creates a positive cycle of generosity</li>
+            </ul>
+            
+            <div class="giving-quote">
+                "We make a living by what we get, but we make a life by what we give." — Winston Churchill
+            </div>
+        </div>
+        
+        <div class="causes-section">
+            <h3>Causes That Matter to You</h3>
+            <p>There are many ways to make a difference. What causes do you care about most?</p>
+            
+            <div class="causes-grid">
+                <div class="cause-card">
+                    <div class="cause-title">Helping People</div>
+                    <ul>
+                        <li>Hunger relief</li>
+                        <li>Homelessness</li>
+                        <li>Education</li>
+                        <li>Healthcare</li>
+                        <li>Elderly care</li>
+                    </ul>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-title">Environment</div>
+                    <ul>
+                        <li>Conservation</li>
+                        <li>Clean water</li>
+                        <li>Climate action</li>
+                        <li>Recycling</li>
+                        <li>Renewable energy</li>
+                    </ul>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-title">Animals</div>
+                    <ul>
+                        <li>Wildlife protection</li>
+                        <li>Animal shelters</li>
+                        <li>Endangered species</li>
+                        <li>Pet adoption</li>
+                        <li>Marine life</li>
+                    </ul>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-title">Community</div>
+                    <ul>
+                        <li>Local schools</li>
+                        <li>Parks and recreation</li>
+                        <li>Libraries</li>
+                        <li>Arts programs</li>
+                        <li>Youth sports</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>Circle the causes that matter most to you, or write your own:</p>
+            <div style="border: 1px dashed #ccc; padding: 15px; min-height: 60px;"></div>
+        </div>
+        
+        <div class="planning-section">
+            <h3>My Philanthropy Plan</h3>
+            
+            <p><strong>My giving goal:</strong> I want to give ______% of my money to help others.</p>
+            
+            <p><strong>The causes I care most about are:</strong></p>
+            <ol>
+                <li><div style="border-bottom: 1px dashed #ccc; padding: 5px;"></div></li>
+                <li><div style="border-bottom: 1px dashed #ccc; padding: 5px;"></div></li>
+                <li><div style="border-bottom: 1px dashed #ccc; padding: 5px;"></div></li>
+            </ol>
+            
+            <p><strong>Ways I can help:</strong></p>
+            <table class="planning-table">
+                <thead>
+                    <tr>
+                        <th>With Money</th>
+                        <th>With Time</th>
+                        <th>With Talents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="min-height: 80px;"></div>
+                        </td>
+                        <td>
+                            <div style="min-height: 80px;"></div>
+                        </td>
+                        <td>
+                            <div style="min-height: 80px;"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Organizations I want to support:</strong></p>
+            <div style="border-bottom: 1px dashed #ccc; padding: 10px; min-height: 40px;"></div>
+            
+            <p><strong>My giving schedule:</strong></p>
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1; text-align: center; padding: 10px; border: 1px solid #ddd;">
+                    <p>Weekly</p>
+                </div>
+                <div style="flex: 1; text-align: center; padding: 10px; border: 1px solid #ddd;">
+                    <p>Monthly</p>
+                </div>
+                <div style="flex: 1; text-align: center; padding: 10px; border: 1px solid #ddd;">
+                    <p>Special Occasions</p>
+                </div>
+                <div style="flex: 1; text-align: center; padding: 10px; border: 1px solid #ddd;">
+                    <p>Yearly</p>
+                </div>
+            </div>
+            <p>Circle your preferred giving schedule.</p>
+        </div>
+        
+        <div class="impact-section">
+            <h3>The Impact of Giving</h3>
+            <p>Even small donations can make a big difference! Here are some examples:</p>
+            
+            <div class="impact-examples">
+                <div class="impact-example">
+                    <p><strong>$5 can provide:</strong></p>
+                    <ul>
+                        <li>A meal for someone who is hungry</li>
+                        <li>School supplies for a child</li>
+                        <li>Vaccines for animals at a shelter</li>
+                        <li>Seeds to plant trees</li>
+                    </ul>
+                </div>
+                
+                <div class="impact-example">
+                    <p><strong>$20 can provide:</strong></p>
+                    <ul>
+                        <li>A backpack of weekend food for a child</li>
+                        <li>Clean water for a family for a month</li>
+                        <li>Medicine for sick animals</li>
+                        <li>Books for a classroom</li>
+                    </ul>
+                </div>
+                
+                <div class="impact-example">
+                    <p><strong>Your time can provide:</strong></p>
+                    <ul>
+                        <li>Companionship for elderly people</li>
+                        <li>Help at an animal shelter</li>
+                        <li>Cleanup of parks or beaches</li>
+                        <li>Tutoring for younger students</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reflection-section">
+            <h3>Thinking About Giving</h3>
+            
+            <div class="reflection-question">
+                <p>1. How does it make you feel when you help others?</p>
+                <div class="reflection-answer"></div>
+            </div>
+            
+            <div class="reflection-question">
+                <p>2. Why do you think Walter Clarke included "Give" as one of the Five Faces of a Dollar?</p>
+                <div class="reflection-answer"></div>
+            </div>
+            
+            <div class="reflection-question">
+                <p>3. What's one way you've helped someone recently? How did it make you feel?</p>
+                <div class="reflection-answer"></div>
+            </div>
+            
+            <div class="reflection-question">
+                <p>4. What's one giving goal you have for the future?</p>
+                <div class="reflection-answer"></div>
+            </div>
+        </div>
+        
+        <div class="parent-note">
+            <h4>Note for Parents:</h4>
+            <p>This philanthropy planning activity connects to Walter Clarke's emphasis on giving as one of the Five Faces of a Dollar in 401Kid. Teaching children to be intentional about giving helps them develop empathy, gratitude, and a sense of purpose with their money.</p>
+            <p>To enhance this activity:</p>
+            <ul>
+                <li>Share your own family's giving traditions and values</li>
+                <li>Help your child research organizations that support causes they care about</li>
+                <li>Consider setting up a "giving jar" where a portion of allowance or earnings goes</li>
+                <li>Look for age-appropriate volunteer opportunities you can do together</li>
+                <li>Discuss how giving doesn't always mean money—time and talents are valuable too</li>
+            </ul>
+            <p>As Clarke notes in the book, teaching children to give helps them understand that money is a tool for making a positive difference in the world, not just for personal consumption. This mindset fosters a healthy relationship with money and connects financial literacy to values and purpose.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Based on concepts from "401Kid" by Walter Clarke | Activity created for financial literacy education</p>
+        </div>
+    </div>
+</body>
+</html>
